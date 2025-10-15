@@ -10,7 +10,7 @@ export default async function Home() {
   let error: string | null = null;
 
   try {
-    const res = await fetch("https://api.asimplekreative.com.br/", {
+    const res = await fetch("https://api.asimplekreative.com.br/api/data", {
       cache: "no-store", // Garante que os dados sejam sempre buscados no servidor
     });
 
