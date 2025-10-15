@@ -10,8 +10,8 @@ export default async function Home() {
   let error: string | null = null;
 
   try {
-    const res = await fetch('http://localhost:3001/api/data', {
-      cache: 'no-store', // Garante que os dados sejam sempre buscados no servidor
+    const res = await fetch("https://api.asimplekreative.com.br/", {
+      cache: "no-store", // Garante que os dados sejam sempre buscados no servidor
     });
 
     if (!res.ok) {
@@ -21,7 +21,7 @@ export default async function Home() {
     items = await res.json();
   } catch (e: any) {
     error = e.message;
-    console.error('Erro ao buscar dados da API:', e);
+    console.error("Erro ao buscar dados da API:", e);
   }
 
   return (
