@@ -24,7 +24,8 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 
 # Expor a porta que o Next.js usa (padrão é 3000)
-EXPOSE 3000
+EXPOSE 3001
+ENV PORT 3001
 
 # Comando para iniciar a aplicação
 CMD ["npm", "start"]
